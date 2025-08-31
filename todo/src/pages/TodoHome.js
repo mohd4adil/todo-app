@@ -7,7 +7,6 @@ import TodoList from '../components/TodoList';
 import ShowTask from '../components/Task.backup.js';
 import styles from './TodoHome.module.css'
 import LogoutButton from '../components/LogoutButton';
-import { fetchTasks } from '../services/api'
 
 const TodoHome = () => {
 
@@ -19,7 +18,7 @@ const TodoHome = () => {
 
     const getTodoList = async () => {
         try {
-            const response = await fetchTasks()
+            const response = await axios.get('http://localhost:5000/api/gettodolist')
             if (response.status === 200 && response.data.taskList) {
                 console.log('Received all the tasks, here they are: ', response.data.taskList);
                 if (Array.isArray(response.data.taskList) && response.data.taskList.length > 0) setTasks(response.data.taskList) 
