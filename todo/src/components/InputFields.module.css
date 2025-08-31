@@ -1,0 +1,42 @@
+.labels {
+    margin: 0px 0px 5px 0px;
+    justify-content: flex-start;
+    text-align: left;
+}
+
+.labels:last-of-type {
+    margin: 30px 0 5px 0;
+}
+
+.inputFields {
+    width: 400px;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    height: 2rem;
+    border-radius: 6px;
+    border: 1px solid gray;
+    padding: 3px 10px;
+}
+
+.passwordWrapper .inputFields {
+    width: 100%;
+    /* Add some padding on the right so text doesn't go under the icon */
+    padding-right: 40px; 
+}
+
+.passwordWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.toggleIcon {
+    position: absolute;
+    right: 10px; /* Position it 10px from the right edge */
+    cursor: pointer;
+    color: #555; /* A nice gray color for the icon */
+    font-size: 1.2rem; /* Make the icon a bit bigger */
+}

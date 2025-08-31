@@ -1,0 +1,44 @@
+.toaster {
+    bottom: 20px;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    width: auto;
+    height: 32px;
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 7px;
+    color: black;
+    font-size: 16px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    animation: slideUp 0.5s ease-out, fadeOut 0.5s ease-out 1.5s forwards;
+    z-index: 1200;
+}
+
+.success {
+    background-color: #99d286
+}
+
+.fail {
+    background-color:#d88282
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateX(-50%) translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(-50%) translateY(0);
+        opactity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}

@@ -1,0 +1,195 @@
+.container {
+    justify-content: center;
+    align-items: center;
+    z-index: 100;   
+    position: relative;
+}
+
+.showTaskContainer {
+    display: flex;
+    background-color: white;
+    border: 1px solid #6C63FF;
+    border-radius: 6px;
+    z-index: 200;
+    padding: 10px;
+    width: 500px;
+    height: 300px;
+    overflow-y: scroll;
+}
+
+.overlay {
+    z-index: 1000;
+    background-color: rgb(0,0,0,0.5);
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.taskName {
+    margin: 5px;
+    font-size: 1.6rem;
+    font-weight: 300;
+    padding: 10px;
+    height: fit-content;
+    width: 300px;
+
+    -webkit-font-smoothing: antialiased;
+}
+
+#taskName {
+    margin: 5px;
+    margin-top: 50px;
+    font-size: 1.6rem;
+    font-weight: 300;  /* Match the non-edit state */
+    padding: 10px;
+    height: 30.5px;
+    width: 300px;
+    -webkit-font-smoothing: antialiased;
+    appearance: none;  /* Remove default browser styling */
+    -webkit-appearance: none;
+}
+
+input, textarea {
+    border: 1px solid #6C63FF;
+    border-radius: 6px;
+    font-family: inherit;  /* Inherit font from parent */
+}
+
+textarea {
+    margin: 20px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.taskName:hover {
+    border: 1px solid #6C63FF;
+    border-radius: 6px;
+}
+
+.taskDescription {
+    padding: 10px;
+    font-weight: 200;
+    font-size: 1.3rem;    
+    height: fit-content;
+    width: 460px;
+}
+
+#taskDescription {
+    margin: 20px;
+    padding: 10px;
+    font-weight: 200;
+    font-size: 1.3rem;    
+    height: 50px;
+    width: 460px;
+    border: 1px solid #6C63FF;
+    border-radius: 6px;
+}
+
+.taskDescription:hover {
+    border: 1px solid #6C63FF;
+    border-radius: 6px;
+}
+
+.exitButtonContainer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    margin-bottom: 10px;
+}
+
+.editButton:hover, .deleteButton:hover {
+    cursor: pointer;
+}
+
+/* .taskNameInput {
+    width: 70%;
+    padding: 5px 10px;
+    border: 1px solid #6C63FF;
+    margin-top:5px;
+    margin-bottom: 20px;
+} */
+
+/* .taskDescriptionInput {
+    width: 70%;
+    padding: 5px 10px;
+    border: 1px solid #6C63FF;
+    border-radius: 5px;
+    height: 100px;
+    margin-bottom: 20px
+
+} */
+
+.taskInfo {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    width: 90%;
+}
+
+.applyButton, .cancelButton {
+    height:auto;
+    width: auto;
+    color: black;
+    border: 1px solid #6C63FF;
+    background-color: transparent;
+    border-radius: 5px;
+    font-size: 16px;
+    padding:5px;    
+}
+
+.applyButton:hover, .cancelButton:hover {
+    background-color: rgb(0,0,0,0.1);
+}
+
+.taskStatus {
+    background-color: transparent;
+    color: black;
+    border: 1px solid #6C63FF;
+    border-radius: 5px;
+    width: 100px;
+    height: 1.5rem;
+}
+
+.editDeleteContainer {
+    display:flex;
+    align-items: center;
+}
+
+.editButton {
+    margin-right: 7px;
+}
+
+.toggleTaskStatus {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;  
+}
+.taskStatus {
+    border: 1px solid #6C63FF;;
+    height: 1.7rem;
+    border-radius: 4px;;
+    color: white;
+    background-color: #6C63FF;
+}
+
+.taskStatus:hover {
+    cursor: pointer;
+}

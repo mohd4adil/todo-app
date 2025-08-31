@@ -1,0 +1,6 @@
+# Output files
+repomix-output.xml
+
+# Node modules from sub-projects
+todo/node_modules
+todo-backend/node_modules

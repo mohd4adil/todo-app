@@ -1,0 +1,23 @@
+.buttonContainer {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 30px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logoutButton {
+    display: flex;
+    background-color: transparent;
+    color: rgb(0,0,0,0.7);
+    border: 1px solid #6C63FF;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 5px 15px;
+    justify-content: center;
+}
+
+.logoutButton:hover {
+    cursor: pointer;
+    background-color: rgb(219, 219, 219);
+}
