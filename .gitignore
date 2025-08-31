@@ -4,3 +4,4 @@ repomix-output.xml
 # Node modules from sub-projects
 todo/node_modules
 todo-backend/node_modules
+.DS_Store
