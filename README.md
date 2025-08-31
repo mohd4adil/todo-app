@@ -1,1 +1,1 @@
-This is just a basic ToDo application built on React and Express
+This is just a basic To Do application built on React and Express
