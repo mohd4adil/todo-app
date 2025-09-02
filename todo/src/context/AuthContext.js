@@ -9,7 +9,6 @@ export const AuthProvider = ({ children }) => {
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState('')
     const navigate = useNavigate();
-    const [path, setPath] = useState('')
 
     useEffect(() => {
         console.log('using effect')
@@ -103,7 +102,6 @@ export const AuthProvider = ({ children }) => {
 
     const signUp = async (email, password) => {
         setError('');
-        setPath('/signup')
         setIsLoading(true);
         try {
             console.log('sending axios request')
@@ -138,7 +136,6 @@ export const AuthProvider = ({ children }) => {
 
     const googleSignUp = async () => {
         setError('');
-        setPath('/signup')
         setIsLoading(true);
         try {
             console.log('sending axios request')
@@ -196,7 +193,6 @@ export const AuthProvider = ({ children }) => {
         logout,
         googleLogin,
         signUp,
-        path,
         googleSignUp
     }
 

@@ -1,13 +1,34 @@
-import  {useState, useEffect, useHook} from 'react'
+import { useCallback, useState} from 'react'
 
-
-export const useApi = () => {
-
-    const [isLoading, setIsLoading] = useState('')
+export const useApi = (apiFunc) => {
+    const [data, setData] = useState([])
     const [error, setError] = useState('')
-    const [data, setData] = useState(null)
-    const [refresh, setRefresh] = useState(0)
+    const [isLoading, setIsLoading] = useState(false)
 
-    
+    const request = useCallback(
+    async (params = {}) =>
+    {
+        setIsLoading(true)
+        try {
+            const response = await apiFunc(params)
+            setData(response.data)
+            return response.data
+        }
+        catch(error) {
+            setError(error)
+            console.log('API Hook is failing')
+            throw error
+        }
+        finally {
+            setIsLoading(false)
+        }
 
+    }, [apiFunc])
+
+    return {
+        data,
+        isLoading,
+        error,
+        request
+    }
 }

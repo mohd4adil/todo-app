@@ -1,15 +1,21 @@
 const taskModel = require('../models/tasksModel')
 
 exports.fetchAllTasks = async(req, res) => {
+    
     try {
         console.log('Attempting to fetch the tasks')
         const response = await taskModel.fetchTaskList(req.cookies.auth_token)
         console.log('back here with the response: ', response)
-        if (response && Array.isArray(response) && response.length == 0) {
-            console.log('empty task list')
-            return res.status(200).json({taskList: []})
-        }
-        return res.status(200).json({taskList: response})
+
+        // Simulate a 5-second delay
+        setTimeout(() => {
+            if (response && Array.isArray(response) && response.length === 0) {
+                console.log('empty task list')
+                return res.status(200).json({taskList: []})
+            }
+            return res.status(200).json({taskList: response})
+        }, 2000);
+
     }
     catch(err) {
         console.log('error while fetching tasks from controller: ', err)

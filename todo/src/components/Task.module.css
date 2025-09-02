@@ -184,10 +184,13 @@ textarea {
 }
 .taskStatus {
     border: 1px solid #6C63FF;;
-    height: 1.7rem;
+    height: 1.9rem;
+    width: 7rem;
     border-radius: 4px;;
     color: white;
     background-color: #6C63FF;
+    font-weight: 800;
+    font-size: 0.9rem;
 }
 
 .taskStatus:hover {

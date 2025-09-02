@@ -1,7 +1,10 @@
 import styles from './TodoList.module.css';  // Fixed import
 
-const TodoList = ({tasks, onTaskClick}) => {
+const TodoList = ({tasks, isLoading, onTaskClick}) => {
     console.log(`tasks length: ${tasks.length}`)
+    if (isLoading) {
+        return <div></div>
+    }
     if (tasks.length > 0) {
     return (
         <div className={styles.mainContainer}>

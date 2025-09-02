@@ -1,0 +1,60 @@
+.deleteContainer {
+    justify-content: center;
+    align-items: center;
+    z-index: 3000;
+    position: relative;
+}
+
+.overlay {
+    z-index: 1000;
+    background-color: rgb(0,0,0,0.5);
+    display: flex;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.deleteBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 12px;
+    z-index: 4000;  
+    height: 150px;
+    width: 400px;
+    background-color: white;
+    border: 1px solid #6C63FF;
+    border-radius: 6px;
+
+}
+
+.deleteText {
+    margin-bottom: 40px;
+    font-weight: 400;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: space-around;
+}
+
+.button {
+    background-color: #6C63FF;
+    padding: 4px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    height:2rem;
+    width: 4rem;
+    font-size: 1rem;
+}
+
+.button:hover {
+    cursor: pointer;
+}
